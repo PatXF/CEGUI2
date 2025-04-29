@@ -1,0 +1,78 @@
+/* ParticleInfoPopup.css */
+.particle-info-popup {
+  position: fixed; /* Position relative to the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the popup */
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1010; /* Ensure it's above the overlay */
+  min-width: 300px; /* Minimum width */
+  max-width: 80%; /* Prevent it from getting too wide */
+  color: #333;
+}
+
+.popup-content h3 {
+  margin-top: 0;
+  color: #0056b3; /* Example header color */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.popup-content p {
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.popup-content strong {
+  color: #555;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-between; /* Pushes buttons apart */
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #eee; /* Separator line */
+}
+
+.popup-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.back-button {
+  background-color: #6c757d; /* Grey */
+  color: white;
+}
+
+.back-button:hover {
+  background-color: #5a6268;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add-bc-button {
+  background-color: #28a745; /* Green */
+  color: white;
+}
+
+.add-bc-button:hover {
+  background-color: #218838;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.remove-bc-button {
+  background-color: #ff0b55;
+  color: white;
+}
+
+.remove-bc-button:hover {
+  background-color: #cf0f47;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}

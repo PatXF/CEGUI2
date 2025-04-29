@@ -1,0 +1,20 @@
+.displayer {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 0%;
+}
+
+.Paint {
+  width: 95%;
+  height: 95%;
+  background-color: #00215e;
+  border-radius: 10px;
+  margin: 0%;
+  padding: 0%;
+  position: relative;
+  overflow: hidden;
+}

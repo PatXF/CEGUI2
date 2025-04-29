@@ -1,0 +1,885 @@
+/* ======================================== */
+/*        Global & Base Component Styles  */
+/* ======================================== */
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  height: 100%;
+  overflow: hidden;
+}
+
+html,
+#root {
+  /* Ensure the root elements take full height */
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.module-body {
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  height: 70vh;
+  width: 40vh;
+  box-sizing: border-box;
+}
+
+.module-header {
+  margin: 0;
+  font-size: 48px;
+}
+
+/* ======================================== */
+/*        Button & Interactive Elements   */
+/* ======================================== */
+
+.module-button,
+.module-button-red,
+.module-button-green {
+  display: inline-block;
+  padding: 8px;
+  margin: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 40px;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Blue button */
+.module-button {
+  background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+  box-shadow: 0px 4px 0px #0072ff;
+}
+.module-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px #0072ff;
+}
+.module-button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #0072ff, #00c6ff);
+}
+.module-button:before,
+.module-button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.module-button:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.module-button:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+/* Red button */
+.module-button-red {
+  background-image: linear-gradient(to bottom right, #ef9651, #ec5228);
+  box-shadow: 0px 4px 0px #ec5228;
+}
+.module-button-red:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px #ec5228;
+}
+.module-button-red:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #ec5228, #ef9651);
+}
+.module-button-red:before,
+.module-button-red:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.module-button-red:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.module-button-red:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+/* Green button */
+.module-button-green {
+  background-image: linear-gradient(to bottom right, #ddeb9d, #a0c878);
+  box-shadow: 0px 4px 0px #a0c878;
+}
+.module-button-green:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px #a0c878;
+}
+.module-button-green:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #a0c878, #ddeb9d);
+}
+.module-button-green:before,
+.module-button-green:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.module-button-green:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+.module-button-green:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+/* ======================================== */
+/*        Other Component Styles          */
+/* ======================================== */
+
+.partContainer {
+  background-color: transparent;
+  height: 10%;
+  align-content: center;
+  cursor: pointer;
+  border-radius: 10px;
+  padding-left: 2%;
+  padding-right: 2%;
+  transition: all 0.5s ease-in-out;
+}
+.partContainer:hover {
+  background-color: #b9e5e8;
+}
+.partContainerClicked {
+  align-content: self-start;
+  height: 50%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.partDetails {
+  margin-top: 2%;
+  height: 60%;
+  background-color: white;
+  padding: 3%;
+  border-radius: 10px;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow-x: hidden;
+}
+.partDetails label {
+  padding-top: 5px;
+  margin: 1%;
+}
+.partDetails input {
+  margin: 1%;
+  padding-left: 1%;
+  height: 30px;
+}
+.partInfoContainer {
+  background-color: #dff2eb;
+  position: relative;
+  margin: 5px 0;
+  padding: 5px;
+  height: 70%;
+  border-radius: 10px;
+  font-weight: bold;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  scrollbar-gutter: stable;
+}
+.module-p {
+  font-size: 15px;
+  color: #b9b28a;
+  margin-left: 2px;
+}
+.module-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px;
+}
+
+/* Navigation, File Dropdown, and Status Bar */
+.navbar {
+  -webkit-app-region: drag;
+  grid-column: span 2;
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background-color: #3c3d37;
+  text-align: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: smaller;
+  gap: 5px;
+}
+.navbarbutton {
+  height: 25px;
+}
+.navbar span {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.fileClass {
+  position: absolute;
+  left: 58px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+  background-color: #3c3d37;
+  color: white;
+  border-radius: 10px;
+  padding: 0.5% 0;
+  /* If fileClass is now off due to grid changes, you may need to recalc this offset */
+}
+.FileButton {
+  padding: 5px;
+  margin-left: 5px;
+  width: 150px;
+  text-align: left;
+}
+/* Parent Grid Item */
+.status {
+  grid-column: span 2;
+  grid-row: span 3;
+  display: flex; /* Use flex to manage the direct child */
+  flex-direction: column; /* Stack children vertically */
+  border-radius: 10px;
+  margin-top: 0;
+  background-color: #80cbc4;
+  /* Padding: top=2px, sides=10px, bottom=10px */
+  padding: 2px 10px 10px 10px;
+  margin-bottom: 10px;
+  height: 120px; /* Fixed height */
+  box-sizing: border-box; /* Include padding/border in height */
+  overflow: hidden; /* Prevent children from visually overflowing .status */
+}
+
+/* Component Root - remove height % */
+.statusContainer {
+  display: flex; /* Use flex to manage its own children */
+  flex-direction: column; /* Stack top bar and display area */
+  flex-grow: 1; /* Grow to fill the space inside .status */
+  min-height: 0; /* Necessary for flex children with overflow */
+  width: 100%;
+  /* Removed height: 80% */
+  /* Removed margin-top: 5px - parent padding handles spacing */
+  box-sizing: border-box;
+  /* border-radius: 10px; /* Maybe remove if parent has it */
+  padding: 0; /* Remove padding if not needed */
+}
+
+/* Top Bar - takes needed height */
+.statusTopContainer {
+  display: flex;
+  align-items: center; /* Align title and buttons */
+  flex-shrink: 0; /* Prevent shrinking */
+  /* Add padding for spacing instead of margin-bottom on button */
+  padding-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.statusClass {
+  margin: 0 5px 0 0; /* Keep some margin if needed */
+}
+
+.statusButton {
+  display: flex;
+  gap: 10px;
+  margin-left: auto; /* Push buttons to the right */
+  /* Removed margin-bottom */
+}
+
+/* Display Area - takes remaining height */
+.statusDisplay {
+  flex-grow: 1; /* Grow to fill remaining vertical space */
+  min-height: 0; /* Crucial for scrolling within flex item */
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
+  padding: 10px;
+  box-sizing: border-box;
+  /* Removed height: 80% */
+}
+
+/* Other UI Elements */
+.Updates {
+  font-weight: bolder;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+}
+.btn {
+  border: none;
+  width: 24px;
+  aspect-ratio: 1/1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.btn:hover img {
+  filter: brightness(1.4);
+  transition: filter 0.2s ease;
+}
+.window {
+  margin-left: auto;
+  display: flex;
+  gap: 5px;
+  margin-right: 5px;
+}
+.navbarbutton,
+.window button {
+  -webkit-app-region: no-drag;
+}
+
+/* Greetings & CTA */
+.greetingsContainer {
+  margin: 0;
+  border: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.greetingHeaderHolder {
+  padding: 0 0 0 15rem;
+  margin: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.greetingGreeting {
+  font-size: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+.greetingButtonHolder {
+  margin: 0;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25rem 0;
+  gap: 20px;
+}
+.cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cta1,
+.cta2 {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: auto;
+}
+.cta1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+.cta1 span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: white;
+}
+.cta1 svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: white;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta1:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+.cta1:hover svg {
+  transform: translateX(0);
+}
+.cta1:active {
+  transform: scale(0.95);
+}
+.cta2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b3d8a8;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+.cta2 span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: white;
+}
+.cta2 svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: white;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+.cta2:hover:before {
+  width: 100%;
+  background: #b3d8a8;
+}
+.cta2:hover svg {
+  transform: translateX(0);
+}
+.cta2:active {
+  transform: scale(0.95);
+}
+
+/* Displayer & Experiment Containers */
+.DisplayerWindow {
+  background-color: #2d336b;
+  color: black;
+  height: 95%;
+  width: 95%;
+  border-radius: 10px;
+}
+.displayerContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.experiment-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+}
+
+/* Context & Job Create */
+.context-window {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 10;
+  width: 150px;
+  background-color: #3c3d37;
+  color: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 30px;
+  left: 430px;
+  padding: 5px;
+}
+.context-buttons {
+  padding: 0 5px;
+  margin: 0;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+  background-color: #3c3d37;
+  width: 140px;
+}
+.context-buttons:hover {
+  filter: brightness(1.3);
+}
+.partInfoContainer select {
+  height: 30px;
+}
+.job-create-container {
+  display: flex;
+  padding: 5px;
+}
+.job-create-container select {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 100px;
+}
+.job-create-container input {
+  margin-left: auto;
+  margin-right: 10px;
+  width: 100px;
+}
+
+/* ======================================== */
+/*         Structural & Popup Layout      */
+/* ======================================== */
+
+/* Editor Page Wrapper using grid layout */
+.editor-page-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  /* Restore original fractions: top: 0.75, middle: 17, bottom: 2.25 */
+  grid-template-rows: 0.75fr 17fr 2.25fr;
+  grid-template-columns: 1fr;
+}
+
+/* Navigation Bar Container - top row */
+.nav-bar-container {
+  grid-row: 1 / 2;
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 1050;
+  display: flex;
+}
+.nav-bar-container > .navbar {
+  width: 100%;
+}
+
+/* Main Content Area - middle row */
+.main-content {
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: filter 0.3s ease-in-out;
+}
+.main-content.blurred {
+  filter: blur(5px);
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Ensure your display and module containers are placed in the correct grid columns */
+.main-content > .displayerContainer,
+.main-content > .DisplayerWindow {
+  grid-column: 1 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.main-content > .module-container-right {
+  grid-column: 2 / 3;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Status Bar Area - bottom row */
+.editor-page-wrapper > .status {
+  grid-row: 3 / 4;
+  grid-column: 1 / -1;
+  position: relative;
+  z-index: 5;
+  /* If the status box is too big, consider explicitly setting its height */
+  height: 100%;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.theta-input {
+  width: 275px;
+  height: 40px;
+  background-color: white;
+  position: absolute;
+  top: 0px;
+  left: 20%;
+  z-index: 1000;
+  border-radius: 5px;
+  display: flex;
+  padding: 5px;
+  gap: 10px;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+.theta-input input {
+  width: 140px;
+}
+
+/* --- START: ADDITIONS FOR JobManager --- */
+
+/* Optional: Section wrapper for running jobs within JobManager */
+.jm-running-jobs-section {
+  margin-top: 15px; /* Add space above the running jobs list */
+  padding-top: 10px;
+  border-top: 1px solid #eee; /* Separator */
+  height: 30%;
+  overflow-y: scroll;
+}
+
+/* Sub-header style within JobManager */
+.jm-section-subheader {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* --- Styling for Individual Running Job Item --- */
+/* Use existing .partContainer as a base for visual consistency */
+/* Add this specific class in JobManager.js: <div className={`partContainer jm-running-job-item ${isCollapsed ? '' : 'partContainerClicked'}`}> */
+.jm-running-job-item {
+  /* Inherits background, padding, border-radius etc. from .partContainer */
+  /* Override height settings from .partContainer when needed */
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 40px; /* Ensure a minimum height like partContainer */
+  align-content: flex-start; /* Align content to top */
+  padding: 5px;
+  /* Add specific border if needed, or rely on partContainer */
+  /* border: 1px solid #e0e0e0; */
+}
+.jm-running-job-item.partContainerClicked {
+  /* Use existing partContainerClicked style for expansion, but override height */
+  height: auto; /* Allow it to grow */
+}
+
+/* Header within the running job item */
+.jm-running-job-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; /* Already handled by partContainer? Verify. */
+  font-weight: bold; /* Already handled by partInfoContainer? Verify. */
+  width: 100%;
+}
+.jm-running-job-item__header span:first-child {
+  margin-right: 10px;
+}
+
+.jm-running-job-item__details {
+  margin-top: 10px; /* Space below header */
+  padding-top: 10px;
+  border-top: 1px dashed #eee; /* Separator */
+}
+
+/* Progress Bar Styles */
+.jm-progress-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.jm-progress-bar__background {
+  flex-grow: 1;
+  height: 12px;
+  background-color: #e0e0e0; /* Background of the unfilled part */
+  border-radius: 6px;
+  margin-right: 10px;
+  overflow: hidden; /* Clip the foreground bar */
+}
+
+.jm-progress-bar__foreground {
+  height: 100%;
+  background-color: #0072ff; /* Default: Blue like module-button */
+  border-radius: 6px;
+  transition: width 0.3s ease-in-out, background-color 0.3s ease; /* Smooth transitions */
+}
+/* Specific colors applied via inline styles in React based on status */
+/* e.g., style={{ width: `${progress}%`, backgroundColor: statusColor }} */
+
+.jm-progress-bar__text {
+  font-weight: bold;
+  min-width: 40px; /* Ensure space for "100%" */
+  text-align: right;
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* Elapsed time display */
+.jm-running-job-item__time {
+  margin-bottom: 8px;
+  color: #666;
+  font-size: 0.9em;
+}
+
+/* Status message display */
+.jm-running-job-item__status-msg {
+  margin-bottom: 8px;
+  font-style: italic;
+  color: #333;
+  padding: 5px 8px;
+  background-color: rgba(239, 239, 239, 0.7);
+  border-radius: 3px;
+  font-size: 0.9em;
+  word-wrap: break-word;
+}
+
+.jm-running-job-item__controls {
+  text-align: right;
+  margin-top: 5px;
+}
+
+.jm-delete-item:hover {
+  background-color: #ffebee;
+}
+/* You might want a specific cursor */
+.jm-delete-item {
+  cursor: pointer;
+}
+
+/* --- END: ADDITIONS FOR JobManager --- */
+
+.jobInfoContainer p {
+  margin-left: 10px;
+}
+
+.job-create-container input {
+  height: 25px;
+  width: 92px;
+}
+
+.job-create-container option {
+  height: 25px;
+  width: 100px;
+}
+
+.module-body-job {
+  background-color: white;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  height: 70vh;
+  width: 40vh;
+  box-sizing: border-box;
+  padding-bottom: 30px;
+}
+
+.jobInfoContainer {
+  background-color: #dff2eb;
+  position: relative;
+  margin: 5px 0;
+  padding: 5px;
+  height: 50%;
+  border-radius: 10px;
+  font-weight: bold;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  scrollbar-gutter: stable;
+}
+
+.resultsInfoContainer {
+  background-color: #dff2eb;
+  position: relative;
+  margin: 5px 0;
+  padding: 5px;
+  height: 50%;
+  border-radius: 10px;
+  font-weight: bold;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in-out;
+  scrollbar-gutter: stable;
+}
+
+.fileContentDisplay {
+  margin-top: 10px;
+  height: 20%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  overflow: auto;
+  background-color: #f9f9f9;
+  font-family: monospace;
+  box-sizing: border-box;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
