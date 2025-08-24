@@ -1,70 +1,68 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# CEGUI – Graphical User Interface for a Particle-Based Solver
 
-## Available Scripts
+**CEGUI** is a cross-platform desktop application developed in **React** and **Electron**, designed to serve as a user-friendly front-end for a **Fortran-based particle solver (PIS2D proxy)**.  
+The goal is to democratize engineering simulations by providing researchers and students with an intuitive, modern GUI that handles model definition, job execution, and results analysis — without requiring in-depth knowledge of solver internals or costly commercial software.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 🔹 Model Setup
+- **Parts & Particles**
+  - Create and manage parts, particles, and rigid components.  
+  - Automatic cleanup of associated data on deletion.  
+  - Step-by-step particle input (coordinates, velocities, volumes).  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Materials**
+  - Define materials with dynamic forms.  
+  - Supports **Elastic, Plastic, Johnson-Cook, JH1/JH2 EOS** models.  
+  - Robust validation (unique names, numeric checks, required fields).  
 
-### `npm test`
+- **Material Assignment**
+  - Associate defined materials with parts.  
+  - Accordion-style expandable list for clean navigation.  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Boundary Conditions**
+  - Intuitive toggle mechanism for applying/removing BCs.  
+  - Blurred background for focused interaction.  
 
-### `npm run build`
+### 🔹 Execution & Monitoring
+- **Job Management**
+  - Create, configure, and submit jobs to the solver.  
+  - Real-time monitoring with **progress bars, status logs, elapsed time**.  
+  - Safe abortion of running jobs.  
+  - Prevents accidental deletions of active jobs.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Results Viewer**
+  - Automatic discovery of completed job outputs.  
+  - Browse solver output files within the app.  
+  - View raw text output (future-ready for graphical post-processing).  
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🔹 Visualization
+- Particle-based interactive display with:
+  - **Zoom, Translate, Rotate** transformations.  
+  - Highlighting of Groups vs. Points.  
+  - Reset view to default.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **DXF Import**  
+  - Import geometry from **AutoCAD DXF files** using blocks & inserts.  
+  - Converts CAD points into particle data for simulation setup.  
 
-### `npm run eject`
+### 🔹 User Experience
+- Clean and modular workflows.  
+- Dynamic, context-sensitive forms (only show relevant fields).  
+- Notifications: **Success, Info, Warning, Error** with a persistent status log.  
+- Multi-window navigation with React Router.  
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠 Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **Frontend/UI:** React, Electron  
+- **Core Modules:** Parts, Particles, Materials, Material Assignment, Boundary Conditions, Job Manager, Results Manager  
+- **Visualization:** Particle-based rendering with transformations  
+- **File Handling:** DXF parsing with `dxf-parser`, job output browsing  
+- **Languages/Tools:** JavaScript, CSS, Fortran (solver backend), Electron IPC  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
