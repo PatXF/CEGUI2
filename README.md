@@ -71,3 +71,5 @@ The goal is to democratize engineering simulations by providing researchers and 
 
 ## Main Application
 <img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4c1e914c-53f0-4728-add7-68fcd4e47941" />
+
+## For using the app please check the releases.
