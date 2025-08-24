@@ -66,3 +66,8 @@ The goal is to democratize engineering simulations by providing researchers and 
 - **Languages/Tools:** JavaScript, CSS, Fortran (solver backend), Electron IPC  
 
 ---
+## Home Screen
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/74f96799-193e-47a9-b09f-7adea73ca13c" />
+
+## Main Application
+<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/4c1e914c-53f0-4728-add7-68fcd4e47941" />
